@@ -14,7 +14,7 @@ public class Aerolinea implements IAerolinea {
 	private int id;
 	private String nombre;
 	private Vuelo[] vuelos = new Vuelo[10];
-	ReadFile archivo = new ReadFile();
+	private ReadFile archivo = new ReadFile();
 
 	
 	
@@ -105,7 +105,6 @@ public class Aerolinea implements IAerolinea {
 	public void consultarVuelos(String origen, String destino)
 	{
 		 System.out.printf("El origen y el destino del vuelo es, respectivamente %s y %s %n",origen,destino);
-		  archivo.retornarVuelos();
 
 
 	}
