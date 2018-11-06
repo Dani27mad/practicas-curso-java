@@ -20,4 +20,10 @@ public class Empleado extends Persona {
 	public String getNombre() {
 		return nombre.toUpperCase();
 	}
+
+	@Override//clase abstracta se autogenera 
+	public String solicitarInformacion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

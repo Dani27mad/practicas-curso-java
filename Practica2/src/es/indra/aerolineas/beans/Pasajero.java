@@ -34,4 +34,11 @@ public class Pasajero extends Persona {
 		this.vuelos = vuelos;
 	}
 
+
+	@Override//la clase es abstracta puede solicitar la informacion de otra clase
+	public String solicitarInformacion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

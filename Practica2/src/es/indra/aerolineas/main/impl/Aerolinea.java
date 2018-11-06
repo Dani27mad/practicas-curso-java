@@ -1,14 +1,16 @@
 /**
  * 
  */
-package es.indra.aerolineas.beans;
+package es.indra.aerolineas.main.impl;
+
+import es.indra.aerolineas.beans.Vuelo;
 
 /**
  * @author josejarizav
  *
  *
  */
-public class Aerolinea {
+public class Aerolinea implements IAaerolinea {
 	
 	private int id;
 	private String nombre;
@@ -48,6 +50,7 @@ public class Aerolinea {
 	/**
 	 * @return the nombre
 	 */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -62,6 +65,7 @@ public class Aerolinea {
 	/**
 	 * @return the vuelos
 	 */
+	@Override
 	public Vuelo[] getVuelos() {
 		return vuelos;
 	}
@@ -74,14 +78,26 @@ public class Aerolinea {
 	}
 
 	
+	/* (non-Javadoc)
+	 * @see es.indra.aerolineas.main.impl.IAaerolinea#consultarVuelos(java.lang.String)
+	 */
+	@Override
 	public void consultarVuelos(String origen) {
 		System.out.println("Metado1  parametro".concat(origen));
 	}
 
+		/* (non-Javadoc)
+		 * @see es.indra.aerolineas.main.impl.IAaerolinea#consultarVuelos(java.lang.String, java.lang.String)
+		 */
+		@Override
 		public void consultarVuelos(String origen,String destino) {
 			System.out.printf("Metado 2 parametros :%s y %s %n", origen, destino);
 	}
 	
+		/* (non-Javadoc)
+		 * @see es.indra.aerolineas.main.impl.IAaerolinea#anularVuelos8(java.lang.String)
+		 */
+		@Override
 		public void anularVuelos8(String...vuelos) {
 			System.out.println("numero de vuelos a anular : " + vuelos.length);
 		}

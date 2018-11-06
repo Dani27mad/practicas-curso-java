@@ -3,14 +3,14 @@
  */
 package es.indra.aerolineas.main;
 
+import es.indra.aerolineas.beans.Aerolinea;
 import es.indra.aerolineas.beans.Pasajero;
 import es.indra.aerolineas.beans.Vuelo;
-import es.indra.aerolineas.main.impl.Aerolinea;
 import es.indra.aerolineas.beans.Empleado;
 
 
 /**
- * @author josejarizav
+ * @author 
  *
  */
 public class Venta {
@@ -25,7 +25,7 @@ public class Venta {
 	}
 
 	/**
-	 * @param args
+	 * @param 
 	 */
 	public static void main(String[] args) {
 
