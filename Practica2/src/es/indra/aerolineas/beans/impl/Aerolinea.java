@@ -46,9 +46,10 @@ public class Aerolinea implements IAerolinea {
 		this.id = id;
 	}
 
-	/**
-	 * @return the nombre
+	/* (non-Javadoc)
+	 * @see es.indra.aerolineas.beans.impl.IAerolinea#getNombre()
 	 */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -60,9 +61,10 @@ public class Aerolinea implements IAerolinea {
 		this.nombre = nombre;
 	}
 
-	/**
-	 * @return the vuelos
+	/* (non-Javadoc)
+	 * @see es.indra.aerolineas.beans.impl.IAerolinea#getVuelos()
 	 */
+	@Override
 	public Vuelo[] getVuelos() {
 		return vuelos;
 	}
