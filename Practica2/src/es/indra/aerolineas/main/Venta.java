@@ -19,7 +19,7 @@ public class Venta {
 		Vuelo[] vuelos = new Vuelo[10];
 		for (int i = 0; i < vuelos.length; i++) {	
 			int a = (int) (Math.random()*10+1);
-			vuelos[i] = new Vuelo(i,"SD" + a, "MAD","VLC", i * 10, true   );
+			vuelos[i] = new Vuelo(i,"SD" + a, "MAD","VLC", i * 10, true   );	
 		}
 		return vuelos;
 	}
@@ -57,6 +57,7 @@ public class Venta {
 		
 		System.out.println("*************************************************************************");
 		
+		aa.consultarVuelos();
 		aa.consultarVuelos("Bcn");
 		aa.consultarVuelos("Bcn","Mad");
 		

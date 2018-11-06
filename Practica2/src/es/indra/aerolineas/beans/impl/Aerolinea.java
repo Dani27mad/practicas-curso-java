@@ -4,17 +4,18 @@
 package es.indra.aerolineas.beans.impl;
 
 import es.indra.aerolineas.beans.IAerolinea;
+import es.indra.aerolineas.services.ReadFile;
 
 /**
  * @author josejarizav
- *
- *
  */
 public class Aerolinea implements IAerolinea {
 	
 	private int id;
 	private String nombre;
 	private Vuelo[] vuelos = new Vuelo[10];
+	ReadFile archivo = new ReadFile();
+
 	
 	
 	public Aerolinea() {		
@@ -87,8 +88,16 @@ public class Aerolinea implements IAerolinea {
 	{
 		 System.out.println("El origen del vuelo es: ".concat(origen));
 		 
+			 //String bruto = archivo.retornarVuelos();
+		
+			 
 	}
 	
+	@Override
+	public void consultarVuelos()
+	{
+		  archivo.retornarVuelos();
+	}
 	/* (non-Javadoc)
 	 * @see es.indra.aerolineas.beans.IAerolinea#consultarVuelos(java.lang.String, java.lang.String)
 	 */
@@ -96,7 +105,9 @@ public class Aerolinea implements IAerolinea {
 	public void consultarVuelos(String origen, String destino)
 	{
 		 System.out.printf("El origen y el destino del vuelo es, respectivamente %s y %s %n",origen,destino);
-		 
+		  archivo.retornarVuelos();
+
+
 	}
 	
 	/* (non-Javadoc)

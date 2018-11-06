@@ -14,4 +14,6 @@ public interface IAerolinea {
 
 	Vuelo[] getVuelos();
 
+	void consultarVuelos();
+
 }

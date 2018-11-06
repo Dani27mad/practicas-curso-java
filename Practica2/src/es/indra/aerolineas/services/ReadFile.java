@@ -14,7 +14,14 @@ public class ReadFile {
 		
 		try {
 			List<String> contenido =  Files.readAllLines(link);
-			System.out.println(contenido);
+			//System.out.println(contenido);
+			//System.out.println(contenido.size());
+			for (int i=0;i<=contenido.size()-1;i++)
+			{
+				System.out.println(contenido.get(i));
+			}
+			
+		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
