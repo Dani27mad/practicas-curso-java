@@ -1,10 +1,10 @@
 /**
  * 
  */
-package es.indra.aerolineas.beans;
+package es.indra.aerolineas.beans.impl;
 
 
-	public class Persona {
+	public abstract class Persona {
 	
 	protected String nombre;
 	protected int id;
@@ -15,6 +15,7 @@ package es.indra.aerolineas.beans;
 	public Persona() {
 	super();
 }
+	public abstract String solicitarInformacion();
 /**
  * 
  * @return Devuelve el nombre de la persona en mayúscula

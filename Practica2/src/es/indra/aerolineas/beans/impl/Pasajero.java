@@ -1,7 +1,7 @@
 /**
  * 
  */
-package es.indra.aerolineas.beans;
+package es.indra.aerolineas.beans.impl;
 
 
 public class Pasajero extends Persona{
@@ -19,9 +19,6 @@ public class Pasajero extends Persona{
 	public void setVuelos(Vuelo[] vuelos) {
 		this.vuelos = vuelos;
 	}
-
-
-
 
 public String getApellido() {
 	return apellido.toUpperCase();
@@ -45,6 +42,12 @@ public int getId() {
 
 public void setId(int id) {
 	this.id = id;
+}
+
+@Override
+public String solicitarInformacion() {
+	
+	return "";
 }
 
 }
