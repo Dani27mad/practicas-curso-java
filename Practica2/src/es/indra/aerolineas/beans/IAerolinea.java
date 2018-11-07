@@ -1,6 +1,8 @@
 package es.indra.aerolineas.beans;
 
+
 import es.indra.aerolineas.beans.impl.Vuelo;
+import es.indra.aerolineas.exceptions.ErrorLecturaDeArchivosExceptions;
 
 public interface IAerolinea {
 
@@ -14,6 +16,6 @@ public interface IAerolinea {
 
 	Vuelo[] getVuelos();
 
-	void consultarVuelos();
+	void consultarVuelos() throws ErrorLecturaDeArchivosExceptions;
 
 }

@@ -3,11 +3,13 @@
  */
 package es.indra.aerolineas.main;
 
+
 import es.indra.aerolineas.beans.IAerolinea;
 import es.indra.aerolineas.beans.impl.Aerolinea;
 import es.indra.aerolineas.beans.impl.Empleado;
 import es.indra.aerolineas.beans.impl.Pasajero;
 import es.indra.aerolineas.beans.impl.Vuelo;
+import es.indra.aerolineas.exceptions.ErrorLecturaDeArchivosExceptions;
 
 /**
  * @author M
@@ -23,8 +25,9 @@ public class Venta {
 
 	/**
 	 * @param args
+	 * @throws ErrorLecturaDeArchivosExceptions 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ErrorLecturaDeArchivosExceptions {
 
 		Vuelo[] vuelos = creaVuelos();
 		
@@ -54,7 +57,8 @@ public class Venta {
 		
 		System.out.println("*************************************************************************");
 		
-		aa.consultarVuelos();
+			aa.consultarVuelos();
+
 		aa.consultarVuelos("Bcn");
 		aa.consultarVuelos("Bcn","Mad");
 		

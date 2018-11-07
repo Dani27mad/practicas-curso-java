@@ -6,6 +6,7 @@ package es.indra.aerolineas.beans.impl;
 import java.util.List;
 
 import es.indra.aerolineas.beans.IAerolinea;
+import es.indra.aerolineas.exceptions.ErrorLecturaDeArchivosExceptions;
 import es.indra.aerolineas.services.ReadFile;
 
 /**
@@ -96,7 +97,7 @@ public class Aerolinea implements IAerolinea {
 	}
 	
 	@Override
-	public void consultarVuelos()
+	public void consultarVuelos() throws ErrorLecturaDeArchivosExceptions
 	{
 		
 		  List<String> contenido = archivo.retornarVuelos();
