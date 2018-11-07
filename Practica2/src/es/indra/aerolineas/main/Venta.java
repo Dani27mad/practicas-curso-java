@@ -17,10 +17,7 @@ public class Venta {
 	
 	private static Vuelo[] creaVuelos() {
 		Vuelo[] vuelos = new Vuelo[10];
-		for (int i = 0; i < vuelos.length; i++) {	
-			int a = (int) (Math.random()*10+1);
-			vuelos[i] = new Vuelo(i,"SD" + a, "MAD","VLC", i * 10, true   );	
-		}
+
 		return vuelos;
 	}
 

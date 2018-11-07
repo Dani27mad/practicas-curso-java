@@ -8,23 +8,15 @@ import java.nio.file.Paths;
 
 public class ReadFile {
 	
-	public void retornarVuelos()
+	public  List<String> retornarVuelos()
 	{
-		Path link = Paths.get("/Users/aula10/repositorios/CursoJava/CursoJava/vuelos.txt");		
-		
+		Path link = Paths.get("/Users/aula12/repositorios/CursoJava//vuelos.txt");			
 		try {
-			List<String> contenido =  Files.readAllLines(link);
-		
-			for (int i=0;i<=contenido.size()-1;i++)
-			{
-				System.out.println(contenido.get(i));
-			}
-			
-		
+			return Files.readAllLines(link);	
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return null;
 	}
 	
 	public static void main (String[] args)
