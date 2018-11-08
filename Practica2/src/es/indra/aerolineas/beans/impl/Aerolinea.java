@@ -3,7 +3,10 @@
  */
 package es.indra.aerolineas.beans.impl;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import es.indra.aerolineas.beans.IAerolinea;
 import es.indra.aerolineas.exceptions.ErrorLecturaDeArchivosExceptions;
@@ -18,6 +21,7 @@ public class Aerolinea implements IAerolinea {
 	private String nombre;
 	private Vuelo[] vuelos = new Vuelo[10];
 	private ReadFile archivo = new ReadFile();
+	private Pasajero billete = new Pasajero();
 
 	
 	
@@ -133,6 +137,19 @@ public class Aerolinea implements IAerolinea {
 		System.out.println("Número de vuelos a anular es, " + nada	.length);
 	}
 	
+	public void consultarBilletes(int id,String[] pasajero)
+	{
+		Map<Integer, String[]> billeteFin = new HashMap<Integer, String[]>(); 
+		
+		billeteFin.put(id,pasajero);
+		
+		Iterator it = billeteFin.keySet().iterator();
+		while(it.hasNext()){
+			  Integer key = (Integer) it.next();
+			  System.out.println("Clave: " + key + " -> Valor: " + billeteFin.get(key));
+			}		
+
+	}
 	
 	
 

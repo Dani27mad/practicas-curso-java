@@ -4,7 +4,7 @@
 package es.indra.aerolineas.beans.impl;
 
 /**
- * @author josejarizav
+ * @author DaniLoren
  *
  *
  */
@@ -12,20 +12,19 @@ public class Vuelo {
 
 	private int id;
 	private String numeroVuelo;
-	/**
-	 * @return the id
-	 */
-	
 	private String origen;
 	private String destino;
 	private int numeroPasajeros;
-	boolean disponible;
-	private String fecha;
+	private boolean disponible;
 	
-	public Vuelo() {}
+	public Vuelo() {
+			}
+	
+	public Vuelo(int id) {
+		this.id = id;		
+	}
 
-
-	public Vuelo(int id, String numeroVuelo, String origen, String destino, int numeroPasajeros, boolean disponible, String fecha) {
+	public Vuelo(int id, String numeroVuelo, String origen, String destino, int numeroPasajeros, boolean disponible) {
 		super();
 		this.id = id;
 		this.numeroVuelo = numeroVuelo;
@@ -33,23 +32,11 @@ public class Vuelo {
 		this.destino = destino;
 		this.numeroPasajeros = numeroPasajeros;
 		this.disponible = disponible;
-		this.fecha = fecha;
-	}
-	public String getFecha() {
-		return fecha;
 	}
 
-
-	public void setFecha(String fecha) {
-		this.fecha = fecha;
-	}
-
-
-	public Vuelo(int id)
-	{
-	
-		
-	}
+	/**
+	 * @return the id
+	 */
 	public int getId() {
 		return id;
 	}
@@ -130,11 +117,5 @@ public class Vuelo {
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;
 	}
-
-	/*public String origenD()
-	{
-		return this.getOrigen();
-	}*/
-
 
 }

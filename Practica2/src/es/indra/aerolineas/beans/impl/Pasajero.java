@@ -3,10 +3,14 @@
  */
 package es.indra.aerolineas.beans.impl;
 
+import java.util.HashMap;
+import java.util.Map;
 
 public class Pasajero extends Persona{
 	
 	private Vuelo[] vuelos;
+	private Map<Integer, String[]> billete = new HashMap<Integer, String[]>(); 
+
 	
 	public Pasajero() {
 		super();
