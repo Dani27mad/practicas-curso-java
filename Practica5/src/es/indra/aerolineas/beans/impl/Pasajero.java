@@ -80,7 +80,7 @@ public class Pasajero extends Persona {
 	 */
 	@Override
 	public String toString() {
-		return "Pasajero [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + "]";
+		return  nombre + ";" + apellido + ";" + dni;
 	}
 	
 	

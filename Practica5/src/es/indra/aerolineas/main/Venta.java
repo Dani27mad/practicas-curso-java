@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Scanner;
 
 import es.indra.aerolineas.beans.IAerolinea;
 import es.indra.aerolineas.beans.impl.Aerolinea;
@@ -16,6 +17,7 @@ import es.indra.aerolineas.beans.impl.Billete;
 import es.indra.aerolineas.beans.impl.Empleado;
 import es.indra.aerolineas.beans.impl.Pasajero;
 import es.indra.aerolineas.beans.impl.Vuelo;
+import es.indra.aerolineas.services.WriteFile;
 
 /**
  * @author josejarizav
@@ -23,6 +25,8 @@ import es.indra.aerolineas.beans.impl.Vuelo;
  */
 public class Venta {
 	
+	private static Scanner scanner;
+
 	private static List<Vuelo> creaVuelos() {
 		List<Vuelo> vuelos = new ArrayList<>();
 		for (int i = 0; i < 100; i++) {	
@@ -112,6 +116,28 @@ public class Venta {
 		System.out.println("*************************************************************************");
 		
 		
+		
+		
+		scanner = new Scanner(System.in);
+		
+		System.out.println("Por favor introduce tu nombre" );
+		
+		String nombre = scanner.nextLine();
+		
+		System.out.println("edad ");
+		
+		int edad = scanner.nextInt();
+		
+		System.out.println("Intruduzcan su saldo disponible");
+		
+		double disponible =scanner.nextDouble();
+		
+		System.out.println("Nombre " + nombre);
+		System.out.println("edad " + edad);
+		System.out.println("Disponible " + disponible);
+	
+		WriteFile wf = new WriteFile();
+		wf.escribirfichero(p);
 		
 
 	}
